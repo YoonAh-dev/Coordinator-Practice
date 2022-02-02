@@ -8,6 +8,11 @@
 import UIKit
 
 final class AppCoordinator: Coordinator {
+    
+    enum AppTransition {
+        case login
+    }
+    
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
     
@@ -18,6 +23,16 @@ final class AppCoordinator: Coordinator {
     }
 
     func start() {
-        transition(to: self, with: ViewController(), using: .root)
+        let viewController = ViewController(coordinator: self)
+        transition(to: self, with: viewController, using: .root)
+    }
+    
+    func performTransition(to transition: AppTransition) {
+        switch transition {
+        case .login:
+            let coordinator = LoginCoordinator(presenter: presenter)
+            addChildCoordinator(coordinator)
+            coordinator.start()
+        }
     }
 }

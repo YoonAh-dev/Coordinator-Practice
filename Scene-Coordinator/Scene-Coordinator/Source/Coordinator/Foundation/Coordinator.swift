@@ -36,6 +36,9 @@ extension Coordinator {
             addChildCoordinator(coordinator)
             presenter.pushViewController(viewController, animated: animated)
         }
+        
+        print(presenter)
+        print(childCoordinators)
     }
     
     func addChildCoordinator(_ childCoordinator: Coordinator) {
