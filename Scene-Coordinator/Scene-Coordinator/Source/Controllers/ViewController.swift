@@ -18,6 +18,13 @@ final class ViewController: UIViewController {
         return button
     }()
     
+    private let button2: UIButton = {
+        let button = UIButton(frame: CGRect(origin: CGPoint(x: 100, y: 300), size: CGSize(width: 100, height: 100)))
+        button.setTitle("main", for: .normal)
+        button.addTarget(self, action: #selector(didTapMainButton), for: .touchUpInside)
+        return button
+    }()
+    
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -31,10 +38,16 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         view.addSubview(button)
+        view.addSubview(button2)
     }
     
     @objc
     private func didTapLoginButton() {
         coordinator.performTransition(to: .login)
+    }
+    
+    @objc
+    private func didTapMainButton() {
+        coordinator.performTransition(to: .main)
     }
 }

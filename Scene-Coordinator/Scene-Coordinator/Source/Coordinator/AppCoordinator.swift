@@ -11,6 +11,7 @@ final class AppCoordinator: Coordinator {
     
     enum AppTransition {
         case login
+        case main
     }
     
     var presenter: UINavigationController
@@ -31,6 +32,10 @@ final class AppCoordinator: Coordinator {
         switch transition {
         case .login:
             let coordinator = LoginCoordinator(presenter: presenter)
+            addChildCoordinator(coordinator)
+            coordinator.start()
+        case .main:
+            let coordinator = MainCoordinator(presenter: presenter)
             addChildCoordinator(coordinator)
             coordinator.start()
         }

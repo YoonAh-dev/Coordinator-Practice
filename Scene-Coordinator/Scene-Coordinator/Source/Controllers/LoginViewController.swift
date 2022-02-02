@@ -11,6 +11,13 @@ final class LoginViewController: UIViewController {
     
     private var coordinator: LoginCoordinator
     
+    private let button: UIButton = {
+        let button = UIButton(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
+        button.setTitle("Main", for: .normal)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        return button
+    }()
+    
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -23,5 +30,11 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
+        view.addSubview(button)
+    }
+    
+    @objc
+    private func didTapLoginButton() {
+        coordinator.performTransition(to: .main)
     }
 }

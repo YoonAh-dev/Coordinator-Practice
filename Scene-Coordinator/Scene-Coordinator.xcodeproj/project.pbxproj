@@ -17,6 +17,8 @@
 		EDF852E727A68F9D007697E5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E627A68F9D007697E5 /* AppCoordinator.swift */; };
 		EDF852E927AA9BA5007697E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E827AA9BA5007697E5 /* LoginViewController.swift */; };
 		EDF852EC27AAA1DD007697E5 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */; };
+		EDF852EE27AAF744007697E5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852ED27AAF744007697E5 /* MainCoordinator.swift */; };
+		EDF852F027AAF765007697E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852EF27AAF765007697E5 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EDF852E627A68F9D007697E5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EDF852E827AA9BA5007697E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		EDF852ED27AAF744007697E5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		EDF852EF27AAF765007697E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			children = (
 				EDF852C927A63196007697E5 /* ViewController.swift */,
 				EDF852E827AA9BA5007697E5 /* LoginViewController.swift */,
+				EDF852EF27AAF765007697E5 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				EDF852DF27A640E6007697E5 /* Foundation */,
 				EDF852E627A68F9D007697E5 /* AppCoordinator.swift */,
 				EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */,
+				EDF852ED27AAF744007697E5 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 				EDF852E927AA9BA5007697E5 /* LoginViewController.swift in Sources */,
 				EDF852C627A63196007697E5 /* AppDelegate.swift in Sources */,
 				EDF852EC27AAA1DD007697E5 /* LoginCoordinator.swift in Sources */,
+				EDF852EE27AAF744007697E5 /* MainCoordinator.swift in Sources */,
 				EDF852C827A63196007697E5 /* SceneDelegate.swift in Sources */,
+				EDF852F027AAF765007697E5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

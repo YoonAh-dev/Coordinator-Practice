@@ -8,6 +8,11 @@
 import UIKit
 
 final class LoginCoordinator: Coordinator {
+    
+    enum LoginTransition {
+        case main
+    }
+    
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
     
@@ -18,5 +23,14 @@ final class LoginCoordinator: Coordinator {
     func start() {
         let loginViewController = LoginViewController(coordinator: self)
         transition(to: self, with: loginViewController, using: .modal, animated: true)
+    }
+    
+    func performTransition(to transition: LoginTransition) {
+        switch transition {
+        case .main:
+            let coordinator = MainCoordinator(presenter: presenter)
+            addChildCoordinator(coordinator)
+            coordinator.start()
+        }
     }
 }
