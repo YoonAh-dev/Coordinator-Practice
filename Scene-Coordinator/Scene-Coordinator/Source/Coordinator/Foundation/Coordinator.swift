@@ -10,6 +10,7 @@ import UIKit
 protocol Coordinator: AnyObject {
     var presenter: UINavigationController { get set }
     var childCoordinators: [Coordinator] { get set }
+    var parentCoordinator: Coordinator? { get set }
     
     func start()
 }
@@ -36,6 +37,10 @@ extension Coordinator {
             addChildCoordinator(coordinator)
             presenter.pushViewController(viewController, animated: animated)
         }
+    }
+    
+    func didFinishChildCoordinator() {
+        parentCoordinator?.removeChildCoordinator(self)
     }
     
     func addChildCoordinator(_ childCoordinator: Coordinator) {

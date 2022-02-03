@@ -27,6 +27,6 @@ final class MainViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        coordinator.didFinishMain()
+        coordinator.didFinishChildCoordinator()
     }
 }

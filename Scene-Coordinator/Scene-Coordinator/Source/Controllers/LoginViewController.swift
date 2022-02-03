@@ -9,7 +9,7 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    private var coordinator: LoginCoordinator
+    var coordinator: LoginCoordinator
     
     private let button: UIButton = {
         let button = UIButton(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
@@ -35,7 +35,7 @@ final class LoginViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        coordinator.didFinishLogin()
+        coordinator.didFinishChildCoordinator()
     }
     
     @objc

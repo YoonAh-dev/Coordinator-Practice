@@ -15,7 +15,7 @@ final class LoginCoordinator: Coordinator {
     
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
-    weak var parentCoordinator: Coordinator?
+    var parentCoordinator: Coordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -34,9 +34,5 @@ final class LoginCoordinator: Coordinator {
             addChildCoordinator(childCoordinator)
             childCoordinator.start()
         }
-    }
-    
-    func didFinishLogin() {
-        parentCoordinator?.removeChildCoordinator(self)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 final class MainCoordinator: Coordinator {
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
-    weak var parentCoordinator: Coordinator?
+    var parentCoordinator: Coordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -20,9 +20,4 @@ final class MainCoordinator: Coordinator {
         let mainViewController = MainViewController(coordinator: self)
         transition(to: self, with: mainViewController, using: .push, animated: true)
     }
-    
-    func didFinishMain() {
-        parentCoordinator?.removeChildCoordinator(self)
-    }
 }
-

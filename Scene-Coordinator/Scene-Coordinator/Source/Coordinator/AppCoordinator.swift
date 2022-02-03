@@ -16,6 +16,7 @@ final class AppCoordinator: Coordinator {
     
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
+    var parentCoordinator: Coordinator?
     
     init(window: UIWindow) {
         presenter = UINavigationController()
