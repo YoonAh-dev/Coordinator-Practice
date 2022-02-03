@@ -31,13 +31,15 @@ final class AppCoordinator: Coordinator {
     func performTransition(to transition: AppTransition) {
         switch transition {
         case .login:
-            let coordinator = LoginCoordinator(presenter: presenter)
-            addChildCoordinator(coordinator)
-            coordinator.start()
+            let childCoordinator = LoginCoordinator(presenter: presenter)
+            childCoordinator.parentCoordinator = self
+            addChildCoordinator(childCoordinator)
+            childCoordinator.start()
         case .main:
-            let coordinator = MainCoordinator(presenter: presenter)
-            addChildCoordinator(coordinator)
-            coordinator.start()
+            let childCoordinator = MainCoordinator(presenter: presenter)
+            childCoordinator.parentCoordinator = self
+            addChildCoordinator(childCoordinator)
+            childCoordinator.start()
         }
     }
 }

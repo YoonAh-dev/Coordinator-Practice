@@ -22,11 +22,11 @@ extension Coordinator {
                     completion: (() -> Void)? = nil) {
         switch style {
         case .root:
+            presenter = UINavigationController(rootViewController: viewController)
             let scene = UIApplication.shared.connectedScenes.first
             if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
                 sceneDelegate.window?.rootViewController = presenter
             }
-            presenter.viewControllers = [viewController]
             removeChildCoordinators()
             addChildCoordinator(coordinator)
         case .push:

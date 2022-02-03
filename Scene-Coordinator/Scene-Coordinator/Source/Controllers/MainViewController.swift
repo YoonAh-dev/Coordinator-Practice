@@ -24,4 +24,9 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .green
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator.didFinishMain()
+    }
 }

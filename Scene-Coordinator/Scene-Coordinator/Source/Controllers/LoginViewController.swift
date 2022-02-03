@@ -33,6 +33,11 @@ final class LoginViewController: UIViewController {
         view.addSubview(button)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator.didFinishLogin()
+    }
+    
     @objc
     private func didTapLoginButton() {
         coordinator.performTransition(to: .main)
