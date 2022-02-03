@@ -9,33 +9,35 @@
 /* Begin PBXBuildFile section */
 		EDF852C627A63196007697E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852C527A63196007697E5 /* AppDelegate.swift */; };
 		EDF852C827A63196007697E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852C727A63196007697E5 /* SceneDelegate.swift */; };
-		EDF852CA27A63196007697E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852C927A63196007697E5 /* ViewController.swift */; };
+		EDF852CA27A63196007697E5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852C927A63196007697E5 /* OnboardingViewController.swift */; };
 		EDF852CF27A63198007697E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF852CE27A63198007697E5 /* Assets.xcassets */; };
 		EDF852D227A63198007697E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF852D027A63198007697E5 /* LaunchScreen.storyboard */; };
 		EDF852E127A64129007697E5 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E027A64129007697E5 /* TransitionModel.swift */; };
 		EDF852E527A68541007697E5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E427A68541007697E5 /* Coordinator.swift */; };
-		EDF852E727A68F9D007697E5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E627A68F9D007697E5 /* AppCoordinator.swift */; };
+		EDF852E727A68F9D007697E5 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E627A68F9D007697E5 /* OnboardingCoordinator.swift */; };
 		EDF852E927AA9BA5007697E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852E827AA9BA5007697E5 /* LoginViewController.swift */; };
 		EDF852EC27AAA1DD007697E5 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */; };
 		EDF852EE27AAF744007697E5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852ED27AAF744007697E5 /* MainCoordinator.swift */; };
 		EDF852F027AAF765007697E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852EF27AAF765007697E5 /* MainViewController.swift */; };
+		EDF852F427ABDEE6007697E5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF852F327ABDEE6007697E5 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDF852C227A63196007697E5 /* Scene-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scene-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF852C527A63196007697E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF852C727A63196007697E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDF852C927A63196007697E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDF852C927A63196007697E5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		EDF852CE27A63198007697E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDF852D127A63198007697E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF852D327A63198007697E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF852E027A64129007697E5 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
 		EDF852E427A68541007697E5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		EDF852E627A68F9D007697E5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EDF852E627A68F9D007697E5 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EDF852E827AA9BA5007697E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		EDF852ED27AAF744007697E5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		EDF852EF27AAF765007697E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EDF852F327ABDEE6007697E5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,7 @@
 		EDF852DD27A631EC007697E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDF852C927A63196007697E5 /* ViewController.swift */,
+				EDF852C927A63196007697E5 /* OnboardingViewController.swift */,
 				EDF852E827AA9BA5007697E5 /* LoginViewController.swift */,
 				EDF852EF27AAF765007697E5 /* MainViewController.swift */,
 			);
@@ -117,9 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				EDF852DF27A640E6007697E5 /* Foundation */,
-				EDF852E627A68F9D007697E5 /* AppCoordinator.swift */,
+				EDF852E627A68F9D007697E5 /* OnboardingCoordinator.swift */,
 				EDF852EB27AAA1DD007697E5 /* LoginCoordinator.swift */,
 				EDF852ED27AAF744007697E5 /* MainCoordinator.swift */,
+				EDF852F327ABDEE6007697E5 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -203,9 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF852E727A68F9D007697E5 /* AppCoordinator.swift in Sources */,
+				EDF852F427ABDEE6007697E5 /* AppCoordinator.swift in Sources */,
+				EDF852E727A68F9D007697E5 /* OnboardingCoordinator.swift in Sources */,
 				EDF852E127A64129007697E5 /* TransitionModel.swift in Sources */,
-				EDF852CA27A63196007697E5 /* ViewController.swift in Sources */,
+				EDF852CA27A63196007697E5 /* OnboardingViewController.swift in Sources */,
 				EDF852E527A68541007697E5 /* Coordinator.swift in Sources */,
 				EDF852E927AA9BA5007697E5 /* LoginViewController.swift in Sources */,
 				EDF852C627A63196007697E5 /* AppDelegate.swift in Sources */,

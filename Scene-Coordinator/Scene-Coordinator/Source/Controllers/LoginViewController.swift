@@ -10,6 +10,7 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     var coordinator: LoginCoordinator
+    var inputText = ""
     
     private let button: UIButton = {
         let button = UIButton(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
@@ -31,6 +32,8 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         view.addSubview(button)
+        
+        print(inputText)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -40,6 +43,6 @@ final class LoginViewController: UIViewController {
     
     @objc
     private func didTapLoginButton() {
-        coordinator.performTransition(to: .main)
+        coordinator.transitionToMain()
     }
 }

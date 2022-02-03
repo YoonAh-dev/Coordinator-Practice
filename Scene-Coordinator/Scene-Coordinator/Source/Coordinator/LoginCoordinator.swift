@@ -8,11 +8,7 @@
 import UIKit
 
 final class LoginCoordinator: Coordinator {
-    
-    enum LoginTransition {
-        case main
-    }
-    
+
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
     var parentCoordinator: Coordinator?
@@ -23,16 +19,14 @@ final class LoginCoordinator: Coordinator {
     
     func start() {
         let loginViewController = LoginViewController(coordinator: self)
-        transition(to: self, with: loginViewController, using: .modal, animated: true)
+        loginViewController.tabBarItem = UITabBarItem(title: "로그인", image: .add, selectedImage: .remove)
+        presenter.setViewControllers([loginViewController], animated: false)
     }
     
-    func performTransition(to transition: LoginTransition) {
-        switch transition {
-        case .main:
-            let childCoordinator = MainCoordinator(presenter: presenter)
-            childCoordinator.parentCoordinator = self
-            addChildCoordinator(childCoordinator)
-            childCoordinator.start()
-        }
+    func transitionToMain() {
+        let childCoordinator = MainCoordinator(presenter: presenter)
+        childCoordinator.parentCoordinator = self
+        addChildCoordinator(childCoordinator)
+        childCoordinator.start()
     }
 }

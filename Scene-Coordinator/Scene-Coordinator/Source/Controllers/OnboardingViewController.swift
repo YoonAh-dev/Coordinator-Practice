@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnboardingViewController.swift
 //  Scene-Coordinator
 //
 //  Created by SHIN YOON AH on 2022/01/30.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class OnboardingViewController: UIViewController {
     
-    private var coordinator: AppCoordinator
+    private var coordinator: OnboardingCoordinator
     
     private let button: UIButton = {
         let button = UIButton(frame: CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 100, height: 100)))
@@ -25,7 +25,7 @@ final class ViewController: UIViewController {
         return button
     }()
     
-    init(coordinator: AppCoordinator) {
+    init(coordinator: OnboardingCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,11 +43,11 @@ final class ViewController: UIViewController {
     
     @objc
     private func didTapLoginButton() {
-        coordinator.performTransition(to: .login)
+        coordinator.transitionToLogin(with: "아니 왜이래")
     }
     
     @objc
     private func didTapMainButton() {
-        coordinator.performTransition(to: .main)
+        coordinator.transitionToMain()
     }
 }

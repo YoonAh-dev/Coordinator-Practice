@@ -8,6 +8,7 @@
 import UIKit
 
 final class MainCoordinator: Coordinator {
+    
     var presenter: UINavigationController
     var childCoordinators: [Coordinator] = []
     var parentCoordinator: Coordinator?
@@ -18,6 +19,7 @@ final class MainCoordinator: Coordinator {
     
     func start() {
         let mainViewController = MainViewController(coordinator: self)
-        transition(to: self, with: mainViewController, using: .push, animated: true)
+        mainViewController.tabBarItem = UITabBarItem(title: "메인", image: .checkmark, selectedImage: .strokedCheckmark)
+        presenter.setViewControllers([mainViewController], animated: false)
     }
 }
